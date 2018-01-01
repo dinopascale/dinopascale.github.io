@@ -5,10 +5,52 @@ html, body {
   margin: 0; }
 
 #wrapper {
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  padding-bottom: 300px; }
 
-.section h2 {
-  letter-spacing: 3px; }
+.section {
+  z-index: 2; }
+  .section h2 {
+    letter-spacing: 3px; }
+
+.section.obliquos {
+  position: relative;
+  padding-bottom: 70px; }
+  .section.obliquos:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 100%;
+    -webkit-transform: skewY(-4deg);
+    transform: skewY(-4deg);
+    -webkit-transform-origin: left;
+    transform-origin: left;
+    z-index: -1; }
+
+.section.black {
+  background: #1c1c1c;
+  color: #fff; }
+  .section.black:before {
+    background: #1C1C1C; }
+
+.section.white {
+  background: #fff;
+  color: #1c1c1c; }
+  .section.white:before {
+    background: #fff; }
+
+.section.after-top {
+  margin-top: 90vh; }
+
+.section.fixed-bottom {
+  position: fixed;
+  bottom: 0px;
+  height: 300px;
+  left: 0;
+  width: 100%;
+  z-index: 1; }
 
 .row.navbar {
   position: fixed;
@@ -23,7 +65,7 @@ html, body {
   display: flex;
   flex-flow: column;
   justify-content: center;
-  z-index: 1; }
+  z-index: -1; }
 
 .row.name span, .row.surname span {
   font-size: 50px;
@@ -34,67 +76,79 @@ html, body {
   font-weight: 400;
   letter-spacing: 2px; }
 
-.section.edu-exp {
-  position: relative;
-  margin-top: 90vh;
-  background: #1c1c1c;
-  z-index: 2;
-  color: #fff;
-  padding-bottom: 70px; }
-  .section.edu-exp:before {
-    position: absolute;
-    content: '';
-    top: 0;
-    right: 0;
-    left: 0;
-    height: 100%;
-    -webkit-transform: skewY(-9deg);
-    transform: skewY(-9deg);
-    -webkit-transform-origin: left;
-    transform-origin: left;
-    background: #1C1C1C;
-    z-index: -1; }
-  .section.edu-exp .row.timeline {
-    position: relative; }
-  .section.edu-exp .entry {
+.row.timeline.black {
+  position: relative; }
+  .row.timeline.black .entry {
     padding: 20px 0px; }
-    .section.edu-exp .entry .title {
+    .row.timeline.black .entry .title {
       font-size: 21px;
       position: relative; }
-      .section.edu-exp .entry .title:before {
+      .row.timeline.black .entry .title:before {
         content: '';
         position: absolute;
-        width: 8px;
-        height: 8px;
+        width: 5px;
+        height: 5px;
         background: #1c1c1c;
-        border: 4px solid #fff;
+        border: 2px solid #fff;
         border-radius: 50%;
         top: 50%;
         left: -15px;
         transform: translate(-15px, -50%);
         z-index: 1000; }
-    .section.edu-exp .entry .description {
+    .row.timeline.black .entry .description {
       font-size: 16px;
-      color: #aaa; }
+      color: #ccc;
+      line-height: 1.5; }
 
-.section.skill {
-  position: relative;
-  min-height: 100vh;
-  background: #fff;
-  z-index: 2;
-  color: #1c1c1c; }
-  .section.skill:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    height: 100%;
-    -webkit-transform: skewY(-7deg);
-    transform: skewY(-7deg);
-    -webkit-transform-origin: left;
-    transform-origin: left;
-    background: #fff;
-    z-index: -1; }
+.row.timeline.white {
+  position: relative; }
+  .row.timeline.white .entry {
+    padding: 20px 0px; }
+    .row.timeline.white .entry .title {
+      font-size: 21px;
+      position: relative; }
+      .row.timeline.white .entry .title:before {
+        content: '';
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        background: #fff;
+        border: 2px solid #1c1c1c;
+        border-radius: 50%;
+        top: 50%;
+        left: -15px;
+        transform: translate(-15px, -50%);
+        z-index: 1000; }
+    .row.timeline.white .entry .description {
+      font-size: 16px;
+      color: #777;
+      line-height: 1.5; }
+
+.about {
+  text-align: left;
+  padding: 0 20px; }
+  .about .content {
+    color: #ccc;
+    line-height: 1.5; }
+
+.contact-list {
+  /*display: flex;
+  flex-flow: column;*/ }
+  .contact-list .contact-el {
+    display: inline-block;
+    width: 100%;
+    margin: 10px 0;
+    font-weight: 400;
+    letter-spacing: 2px;
+    font-size: 16px;
+    position: relative; }
+    .contact-list .contact-el a {
+      color: inherit;
+      text-decoration: none;
+      position: absolute;
+      top: 0;
+      left: 20px;
+      margin-left: 10px;
+      border-bottom: 1px dashed #fff; }
 
 /*# sourceMappingURL=main.css.map */
