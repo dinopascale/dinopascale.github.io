@@ -4,7 +4,7 @@
         <title>Dino Pascale - Resume</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="public/style/main.css" />
-        <link href="https://fonts.googleapis.com/css?family=Rubik:400,900" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,900" rel="stylesheet">
         <style>
         /*
             Downloaded from https://github.com/kristoferjoseph/flexboxgrid
@@ -15,9 +15,18 @@
     </head>
     <body>
         <div id="wrapper" class="wrapper">
-            <div class="navbar">
+            <div class="navbar" id="nav">
                 <div class="button-container">
-                    <p class="close" id="menu-btn">menu</p>
+                    <p class="btn-menu close" id="menu-btn">menu</p>
+                </div>
+                <div class="row">
+                    <div id="menu-list-expanded" class="col-sm-offset-2 col-sm-8 col-lg-offset-3 col-lg-6 expanded-menu">
+                        <p class="home"><a href="#home">DP</a></p>
+                        <p><a href="#about">About</a></p>
+                        <p><a href="#edu">Education</a></p>
+                        <p><a href="#exp">Experience</a></p>
+                        <p><a href="#skills">Skills</a></p>
+                    </div>
                 </div>
             </div>
             <section class="menu menu--close" id="menu">
@@ -62,16 +71,10 @@
                     </div>
                 </div>
                     <div class="row about">
-                        <div class="col-xs-12">
+                        <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8 col-lg-offset-3 col-lg-6">
                         <p class="content">
-                            Hi! I'm Dino Pascale, a front-end dev born and raised in Italy. I love
+                            Hi! I'm Dino Pascale, a front-end dev born and raised in Italy. I love programming, web world and its possibilities, crafting beautiful website, cats.
                         </p>
-                            <ul class="content">
-                                <li>programming</li>
-                                <li>web world and its possibilities</li>
-                                <li>crafting beautiful website</li>
-                                <li>cats</li>
-                            </ul>
                         <p class="content">Currently i'm working as a freelancer here in Italy, but i would apply for a front-end developer junior position. So now let me convince you to hire me! 
                         </p>
                         <p class="content">
@@ -84,19 +87,19 @@
                     </div>
                 </div>
                 <div class="row timeline black">
-                   <div data-js="entry-one" class="col-xs-offset-2 col-xs-9 entry animate--js">
+                   <div data-js="entry-one" class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8 col-lg-offset-3 col-lg-6 entry animate--js">
                     <div class="title">Web Design and Social Media Marketing, Gen 2016 - Lug 2016</div>
                     <div class="description">
                         <p>A entry level course, which taughts me the basis of HTML, CSS, Javascript and PHP5, SQL, SEO</p>
                     </div>
                   </div>    
-                  <div data-js="entry-two" class="col-xs-offset-2 col-xs-9 entry animate--js">
+                  <div data-js="entry-two" class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8 col-lg-offset-3 col-lg-6 entry animate--js">
                     <div class="title">Web Design for Everybody (Basics of Web Development and Coding), Nov 2015 - Nov 2016</div>
                     <div class="description">
                         <p>A 5-course specialization by University of Michigan on Coursera, which give me basic notions on HTML, CSS, Responsive Design and Accessibility</p>
                     </div>
                   </div>
-                  <div data-js="entry-three" class="col-xs-offset-2 col-xs-9 entry animate--js">
+                  <div data-js="entry-three" class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8 col-lg-offset-3 col-lg-6 entry animate--js">
                     <div class="title">Bachelor’s Degree in Physics at University of Milan, 2009 - 2012</div>
                     <div class="description">
                         <p>
@@ -113,7 +116,7 @@
                     </div>
                 </div>
                 <div class="row timeline white">
-                  <div data-js="entry-four" class="col-xs-offset-2 col-xs-9 entry animate--js">
+                  <div data-js="entry-four" class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8 col-lg-offset-3 col-lg-6 entry animate--js">
                     <div class="title">Freelance, 2016 - now</div>
                     <div class="description">
                         <p>During my formation as front-end developer i find two clients with which i start a collaboration for the restyling of their websites. You can find the results on the portfolio section of this website.</p>
@@ -122,7 +125,7 @@
                         </p>
                     </div>
                   </div>
-                  <div data-js="entry-five" class="col-xs-offset-2 col-xs-9 entry animate--js">
+                  <div data-js="entry-five" class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8  col-lg-offset-3 col-lg-6 entry animate--js">
                     <div class="title">Employee in Campus Bio-Medico University of Rome's Press and Communications Office, Jul 2015 - Jan 2016</div>
                     <div class="description">
                         <p>I worked in a four persons team as webmaster of university's website. I was responsible for the daily update on website, communication with other offices for contents delivery and structural upgrades using JOOMLA cms. </p>
@@ -136,15 +139,15 @@
                     </div>
                 </div>
                 <div class="row skills">
-                    <div class="col-xs-offset-1 col-xs-10 tech">
-                        <h3>i. technical skills</h3>
+                    <div class="col-xs-offset-1 col-xs-10  col-sm-offset-2 col-sm-8 col-lg-offset-3 col-lg-6 tech">
+                        <h3>technical skills</h3>
                         <p data-js="skill-one" class="tech-skill content animate--js"><em>Strong</em> : HTML5, CSS3, Javascript, JQUery, Responsive Web Design</p>
                         <p data-js="skill-two" class="tech-skill content animate--js"><em>Knowledgeable</em> : React, Redux, Webpack, Sass, Bootstrap, Wordpress</p>
                     </div>
                 </div>
                 <div class="row skills">
-                    <div class="col-xs-offset-1 col-xs-10">
-                        <h3>ii. soft skills</h3>
+                    <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8 col-lg-offset-3 col-lg-6">
+                        <h3>soft skills</h3>
                         <ul class="soft-skill content">
                             <li data-js="skill-three" class="animate--js"><span class="soft-skill label">Problem Solving</span><p>Working on my side project Mtg Discovery, I implemented, after hours of studying, a caching system in order to reduce AJAX calls and improve the overall app's speed</p></li>
                             <li data-js="skill-four" class="animate--js"><span class="soft-skill label">Love for learning</span><p>On average, I spend two hours every day for learning new things from courses on Udemy and reading news about front-end world from different sources (Medium, The Practical Dev, Site Point). I'm also a fast learner: during my job at Campus Bio-Medico University of Rome, i've become really proficient in JOOMLA in less than two weeks and reduce our team dependecy from IT office</p></li>
@@ -152,17 +155,22 @@
                         </ul>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-xs-offset-1 col-xs-10">
-                        <h3>iii. portfolio</h3>
+                <div class="row skills">
+                    <div class="col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8 col-lg-offset-3 col-lg-6">
+                        <h3>portfolio</h3>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-xs-offset-1 col-xs-10 project-grid">
-                        <div data-js="port-one" class="project-card animate--js">
-                            <div class="pre-img se"><a href="http://www.santelenaservice.it/" target="_blank" class="img-link"></a></div>
-                            <div class="project-title">Sant'Elena Service</div>
-                            <p class="project-tech">Restyling of client's old website<br/><em>Wordpress</em></p>
+                    <div class="col-xs-offset-1 col-xs-10 col-sm-offset-1 col-sm-10 project-grid">
+                        <div data-js="port-four" class="project-card animate--js">
+                            <div class="pre-img re"></div>
+                            <div class="project-title re">Resume Website</div>
+                            <p class="project-tech">Website Inception<br/><em>Html, Sass, Flexbox Grid, Javascript</em></p>
+                        </div>
+                        <div data-js="port-three" class="project-card animate--js">
+                            <div class="pre-img mtgd"><a href="http://dinopascale.altervista.org/mtgdiscovery2/" target="_blank" class="img-link"></a></div>
+                            <div class="project-title">Mtg Discovery</div>
+                            <p class="project-tech">A Magic: The Gathering tournament locator. You can learn more on the <a href="https://github.com/dinopascale/Discovery" target="_blank">project's repo</a><br/><em>Html, Css, Vanilla Javascript (ES6), Webpack</em></p>  
                         </div>
                         <div data-js="port-two" class="project-card animate--js">
                             <div class="pre-img pb">
@@ -170,15 +178,10 @@
                             <div class="project-title">Primitive Bontà</div>
                             <p class="project-tech">Website builded from zero for a new company<br/><em>Wordpress</em></p>
                         </div>
-                        <div data-js="port-three" class="project-card animate--js">
-                            <div class="pre-img mtgd"><a href="http://dinopascale.altervista.org/mtgdiscovery2/" target="_blank" class="img-link"></a></div>
-                            <div class="project-title">Mtg Discovery</div>
-                            <p class="project-tech">A Magic: The Gathering tournament locator. You can learn more on the <a href="https://github.com/dinopascale/Discovery" target="_blank">project's repo</a><br/><em>Html, Css, Vanilla Javascript (ES6), Webpack</em></p>     
-                        </div>
-                        <div data-js="port-four" class="project-card animate--js">
-                            <div class="pre-img re"></div>
-                            <div class="project-title re">Resume Website</div>
-                            <p class="project-tech">Website Inception<br/><em>Html, Sass, Flexbox Grid, Javascript</em></p>
+                        <div data-js="port-one" class="project-card animate--js">
+                            <div class="pre-img se"><a href="http://www.santelenaservice.it/" target="_blank" class="img-link"></a></div>
+                            <div class="project-title">Sant'Elena Service</div>
+                            <p class="project-tech">Restyling of client's old website<br/><em>Wordpress</em></p>
                         </div>
                     </div>
                 </div>

@@ -53,14 +53,26 @@ function anchorLink() {
     var targetClick = event.target;
     if(targetClick.tagName !== 'A') return false
     event.preventDefault();
-    var target = $(targetClick.hash);
-    $('#menu-btn').trigger('click')
+    var target = (targetClick.hash === '#home')
+                    ? $('#wrapper')
+                    : $(targetClick.hash);
+    if($('#menu-btn').is(':visible')) {
+        $('#menu-btn').trigger('click')   
+    }
     $('html,body').animate({
-        scrollTop:$(targetClick.hash).offset().top-50
+        scrollTop:target.offset().top-50
     }, 900, 'swing', function () {
         
     });
 
+}
+
+function addNavShadow () {
+    if( $(window).scrollTop() > 100 && !$('#nav').hasClass('shadow')) {
+        $('#nav').addClass('shadow')
+    } else if ( $(window).scrollTop() < 100 ) {
+        $('#nav').removeClass('shadow') 
+    }
 }
 
 
@@ -68,7 +80,7 @@ function anchorLink() {
 $(document).ready(function () {
     var animationIndex = createArrAnimation('animate--js'),
         menuBtn = $('#menu-btn');
-        
+    $(window).scroll(addNavShadow);    
     $(window).scroll(showContact);
     $(window).scroll(function() {
         fadeOnScroll(animationIndex)
@@ -86,4 +98,5 @@ $(document).ready(function () {
         $('#menu').toggleClass('menu--close menu--open')
     })
     $('#menu-list').click(anchorLink)
+    $('#menu-list-expanded').click(anchorLink)
 })
