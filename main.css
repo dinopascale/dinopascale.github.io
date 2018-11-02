@@ -1,0 +1,263 @@
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box; }
+
+html,
+body {
+  font-size: 62.5%;
+  margin: 0;
+  overflow-x: hidden; }
+  @media (min-width: 64em) {
+    html,
+    body {
+      width: 100vw;
+      height: 100vh; } }
+
+.app-container {
+  width: 100%;
+  height: 100%;
+  padding: 2.4rem 2.8rem;
+  display: flex;
+  flex-flow: column;
+  position: relative; }
+
+.content {
+  padding-top: 2.4rem;
+  flex-grow: 1;
+  display: flex;
+  flex-flow: row wrap; }
+
+a:hover {
+  font-style: italic; }
+
+.only-desktop {
+  display: none; }
+  @media (min-width: 64em) {
+    .only-desktop {
+      display: block; } }
+
+@font-face {
+  font-family: 'Helvetica Neue LT Std 45 Light';
+  font-style: normal;
+  font-weight: normal;
+  src: local("Helvetica Neue LT Std 45 Light"), url("fonts/HelveticaNeueLTStd Lt.woff") format("woff"); }
+
+@font-face {
+  font-family: 'Helvetica Rounded LT Std Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local("Helvetica Rounded LT Std Bold"), url(fonts/HelveticaRoundedLTStd-Bd.woff) format("woff"); }
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Helvetica Neue LT Std 45 Light", sans-serif;
+  font-weight: 900; }
+
+p,
+li,
+a {
+  margin: 0; }
+
+a:hover {
+  color: #5cc8a8 !important; }
+
+h1 {
+  font-size: 6.4rem; }
+
+.front-title {
+  font-size: 6.4rem; }
+
+.fill-animation {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: fillLogo 3s linear forwards; }
+  .fill-animation.delay {
+    animation-delay: 1.5s; }
+
+@keyframes fillLogo {
+  from {
+    stroke-dashoffset: 1000; }
+  to {
+    stroke-dashoffset: 0; } }
+
+.project__links {
+  flex: 1 1 100%; }
+  @media (min-width: 64em) {
+    .project__links {
+      flex: 0 0 45%; } }
+
+.link__row {
+  display: flex;
+  flex-flow: row wrap;
+  padding-bottom: 2.4rem; }
+  @media (min-width: 37.5em) {
+    .link__row {
+      padding-bottom: 1.6rem; } }
+  @media (min-width: 64em) {
+    .link__row {
+      padding-right: 10%; } }
+
+.project__link {
+  flex: 1 1 100%;
+  font-size: 1.7rem;
+  font-family: "Helvetica Neue LT Std 45 Light", sans-serif;
+  text-decoration: none;
+  line-height: 22px;
+  letter-spacing: 1px;
+  color: inherit; }
+  @media (min-width: 37.5em) {
+    .project__link {
+      flex: 0 0 50%;
+      min-height: 36px; } }
+  .project__link.description {
+    flex: 1 1 100%; }
+    @media (min-width: 37.5em) {
+      .project__link.description {
+        flex: 0 0 50%; } }
+
+.section_header h2 {
+  font-size: 2.4rem;
+  font-family: "Helvetica Rounded LT Std Bold", "sans-serif"; }
+
+@media (min-width: 64em) {
+  .section_header {
+    display: none; } }
+
+.section__about {
+  flex: 1 1 100%;
+  margin-top: 2rem; }
+  .section__about p {
+    font-size: 1.7rem;
+    line-height: 22px;
+    font-family: "Helvetica Neue LT Std 45 Light", sans-serif;
+    margin: 0;
+    letter-spacing: 1px; }
+    @media (min-width: 64em) {
+      .section__about p {
+        padding-right: 16%; } }
+  @media (min-width: 64em) {
+    .section__about {
+      flex: 0 0 25%;
+      margin-top: 0; } }
+
+.section__contacts {
+  flex: 1 1 100%;
+  font-size: 1.7rem;
+  font-family: "Helvetica Neue LT Std 45 Light", sans-serif;
+  letter-spacing: 1px;
+  margin-top: 2rem; }
+  .section__contacts p {
+    margin: 0;
+    line-height: 22px; }
+  @media (min-width: 64em) {
+    .section__contacts {
+      flex: 0 0 25%;
+      margin-top: 0; } }
+  .section__contacts .contacts__list {
+    margin: 2rem 0;
+    padding: 0;
+    list-style: none; }
+    .section__contacts .contacts__list li {
+      padding: 0.5rem; }
+    .section__contacts .contacts__list .email,
+    .section__contacts .contacts__list .github,
+    .section__contacts .contacts__list .linkedin,
+    .section__contacts .contacts__list .cv {
+      text-decoration: none;
+      color: inherit; }
+
+.header {
+  margin: 0;
+  display: flex;
+  flex-flow: row nowrap;
+  list-style: none;
+  padding: 0; }
+  .header .works,
+  .header .about,
+  .header .contacts {
+    font-size: 2.4rem;
+    font-family: "Helvetica Rounded LT Std Bold", "sans-serif"; }
+  .header a {
+    color: inherit;
+    text-decoration: none; }
+  .header a:hover {
+    font-style: italic;
+    cursor: pointer; }
+  .header .works {
+    width: 45%; }
+  .header .about,
+  .header .contacts {
+    width: 25%; }
+
+#logo {
+  display: none; }
+  @media (min-width: 64em) {
+    #logo {
+      display: inherit;
+      width: 250px;
+      height: 250px;
+      position: absolute;
+      bottom: 40px;
+      right: 0; } }
+
+.column__description {
+  flex: 1 1 100%; }
+  @media (min-width: 64em) {
+    .column__description {
+      flex: 0 0 25%; } }
+  .column__description .single_work__title {
+    margin: 0;
+    font-size: 2.8rem;
+    font-family: "Helvetica Rounded LT Std Bold", "sans-serif";
+    margin-bottom: 1.6rem; }
+  .column__description p,
+  .column__description .single_work__link,
+  .column__description .single_work__techs {
+    font-size: 1.7rem;
+    font-family: "Helvetica Neue LT Std 45 Light", sans-serif;
+    line-height: 25px;
+    letter-spacing: 1px; }
+  .column__description .single_work__link,
+  .column__description a {
+    color: inherit;
+    text-decoration: none; }
+  .column__description .single_works__tech_title {
+    margin: 1.6rem 0 0.8rem 0;
+    font-family: "Helvetica Rounded LT Std Bold", "sans-serif";
+    font-size: 1.8rem; }
+  .column__description .single_work__techs {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 1.7rem; }
+
+.column__images {
+  flex: 0 0 75%; }
+  .column__images .grid__images {
+    width: calc(85% - 100px);
+    margin-left: auto;
+    height: 100%;
+    position: relative; }
+  .column__images .single__work_img {
+    position: absolute;
+    width: calc(75% - 100px);
+    max-width: 500px;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -20%); }
+    .column__images .single__work_img.active {
+      transform: translate(-50%, -20%); }
+    .column__images .single__work_img img {
+      max-height: 100%; }
+
+
+/*# sourceMappingURL=main.css.map*/
